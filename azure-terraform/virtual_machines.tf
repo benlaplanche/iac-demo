@@ -1,0 +1,31 @@
+resource "azurerm_virtual_machine" "denied_3" {
+  name                = "production"
+  resource_group_name = "networking"
+
+  os_profile_linux_config {
+    disable_password_authentication = false
+  }
+
+  os_profile {
+    custom_data = <<CUSTOM
+#cloud-config
+write_files:
+    - path: "/etc/profile.env"
+      content: |
+        export
+AZURE_CONNECTION_STRING="BlobEndpoint=https://cloudconfigdeleteme.blob.core.windows.net/;QueueEndpoint=https://cloudconfigdeleteme.queue.core.windows.net/;FileEndpoint=https://cloudconfigdeleteme.file.core.windows.net/;TableEndpoint=https://cloudconfigdeleteme.table.core.windows.net/;SharedAccessSignature=sv=2019-12-12&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-11-19T17:27:35Z&st=2020-11-19T09:27:35Z&spr=https,http&sig=c8MBs5cBrMo1ImXEj5V47KjiWs8yKy4iRIyku%2F%2FnNGw%3D"
+CUSTOM
+  }
+}
+
+resource "azurerm_managed_disk" "large-disk" {
+  disk_size_gb = 100
+
+  tags = {
+    Environment = "Production"
+  }
+
+  encryption_settings {
+    enabled = false
+  }
+}

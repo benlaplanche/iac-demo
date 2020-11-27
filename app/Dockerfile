@@ -1,0 +1,14 @@
+ARG BASE=ruby:2.6.0
+
+FROM ruby:2.6.0 as base
+
+RUN bundle config --global frozen 1
+RUN bundle config set without "development test"
+
+WORKDIR /app
+
+COPY Gemfile Gemfile.lock ./
+RUN bundle install && bundle clean --force
+EXPOSE 4567
+
+CMD ["bundle", "exec", "ruby", "app.rb"]
