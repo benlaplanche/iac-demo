@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Snyk to check Kubernetes manifest file for issues
         continue-on-error: true
-        uses: snyk/actions/iac@master
+        uses: snyk/actions/iac@fix/iac-sarif-output
         with:
           args: --severity-threshold=high
         env:
