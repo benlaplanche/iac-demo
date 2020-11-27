@@ -13,6 +13,7 @@ jobs:
         continue-on-error: true
         uses: snyk/actions/iac@fix/iac-sarif-output
         with:
+          file: .
           args: --severity-threshold=high
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
