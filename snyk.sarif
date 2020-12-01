@@ -675,7 +675,7 @@
                 "text": "Terraform Azure"
               },
               "help": {
-                "markdown": "## Issue\nSecret value has been declared in virtual machine configuration\n\n ## Impact\nThe secret value will be readable to anyone with access to VCS, which can lead to unauthorized data disclosure or privilege escalation\n\n ## Resolution\nRemove secret value from configuration",
+                "markdown": "\n \n ## Issue\nSecret value has been declared in virtual machine configuration\n\n ## Impact\nThe secret value will be readable to anyone with access to VCS, which can lead to unauthorized data disclosure or privilege escalation\n\n ## Resolution\nRemove secret value from configuration",
                 "text": ""
               },
               "defaultConfiguration": {
@@ -725,7 +725,7 @@
                   "uri": "virtual_machines.tf"
                 },
                 "region": {
-                  "startLine": 28
+                  "startLine": 39
                 }
               }
             }
@@ -758,7 +758,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "azure-terraform/virtual_machines.tf"
+                  "uri": "virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 9
@@ -776,10 +776,28 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "azure-terraform/virtual_machines.tf"
+                  "uri": "virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-CC-TF-182",
+          "message": {
+            "text": "This line contains a potential high severity misconfiguration affecting the Terraform Azure"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "virtual_machines.tf"
+                },
+                "region": {
+                  "startLine": 21
                 }
               }
             }

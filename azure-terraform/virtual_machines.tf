@@ -18,6 +18,17 @@ CUSTOM
   }
 }
 
+resource "azurerm_linux_virtual_machine" "denied_2" {
+  custom_data = <<CUSTOM
+I2Nsb3VkLWNvbmZpZwp3cml0ZV9maWxlczoKICAgIC0gcGF0aDogIi9ldGMvcHJvZmlsZS5lbnYi
+CiAgICAgICAgICBjb250ZW50OiB8CiAgICAgICAgICAgICAgICAgIGV4cG9ydAogICAgICAgICAg
+ICAgICAgICBBWlVSRV9TQVNfVE9LRU49Ij9zdj0yMDE5LTEyLTEyJnNzPWJmcXQmc3J0PXNjbyZz
+cD1yd2RsYWN1cHgmc2U9MjAyMC0xMS0xOVQxNzoyNzozNVomc3Q9MjAyMC0xMS0xOVQwOToyNzoz
+NVomc3ByPWh0dHBzLGh0dHAmc2lnPWM4TUJzNWNCck1vMUltWEVqNVY0N0tqaVdzOHlLeTRpUkl5
+a3UlMkYlMkZuTkd3JTNEIgoK
+CUSTOM
+}
+
 resource "azurerm_managed_disk" "large-disk" {
   disk_size_gb = 100
 
