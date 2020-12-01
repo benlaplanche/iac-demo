@@ -758,7 +758,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "virtual_machines.tf"
+                  "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 9
@@ -776,7 +776,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "virtual_machines.tf"
+                  "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 9
@@ -794,7 +794,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "virtual_machines.tf"
+                  "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 21
