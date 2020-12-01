@@ -761,7 +761,7 @@
                   "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
-                  "startLine": 5
+                  "startLine": 9
                 }
               }
             }
@@ -779,7 +779,7 @@
                   "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
-                  "startLine": 5
+                  "startLine": 9
                 }
               }
             }
