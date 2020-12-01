@@ -675,6 +675,7 @@
                 "text": "Terraform Azure"
               },
               "help": {
+                "markdown": "##Issue\nSecret value has been declared in virtual machine configuration\n\n##Impact\nThe secret value will be readable to anyone with access to VCS, which can lead to unauthorized data disclosure or privilege escalation\n\n##Resolution\nRemove secret value from configuration",
                 "text": ""
               },
               "defaultConfiguration": {
@@ -757,7 +758,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "virtual_machines.tf"
+                  "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 5
@@ -775,7 +776,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "virtual_machines.tf"
+                  "uri": "azure-terraform/virtual_machines.tf"
                 },
                 "region": {
                   "startLine": 5
