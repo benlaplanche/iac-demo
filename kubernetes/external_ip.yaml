@@ -11,4 +11,36 @@ spec:
       port: 80
       targetPort: 8080
   externalIPs:
-    - 1.1.1.1
+    - 1.2.3.4
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: using-external-ip-explicit-type
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
+  externalIPs:
+    - 1.2.3.4
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ignore-nodeport-types
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
+  externalIPs:
+    - 1.2.3.4
