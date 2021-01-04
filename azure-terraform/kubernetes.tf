@@ -3,6 +3,11 @@ provider "azurerm" {
   features {}
 }
 
+variable "rbac_enabled" {
+  type = boolean
+  default = false
+}
+
 resource "azurerm_resource_group" "k8s" {
   name     = "my-kubernetes-cluster"
   location = "Central US"
@@ -41,7 +46,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   api_server_authorized_ip_ranges = ["0.0.0.0/0"]
 
   role_based_access_control {
-    enabled = false
+    enabled = var.rbac_enabled
   }
 
 
