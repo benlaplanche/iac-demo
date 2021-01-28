@@ -5,6 +5,9 @@ FROM ruby:2.6.0 as base
 RUN bundle config --global frozen 1
 RUN bundle config set without "development test"
 
+RUN apt-get update
+RUN apt-get install -y imagemagick
+
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
