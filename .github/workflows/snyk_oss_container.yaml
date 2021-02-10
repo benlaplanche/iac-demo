@@ -13,7 +13,8 @@ jobs:
       continue-on-error: true
       uses: snyk/actions/ruby@master
       with:
-        args: app/ --sarif-file-output=oss.sarif
+        # args: app/ --sarif-file-output=oss.sarif
+        command: test app/ --sarif-file-output=oss.sarif
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     - name: Upload result to GitHub Code Scanning
