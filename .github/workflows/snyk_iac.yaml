@@ -14,9 +14,11 @@ jobs:
         uses: snyk/actions/iac@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test . --sarif-file-output=iac.sarif
       - uses: github/codeql-action/upload-sarif@v1
         with:
-          sarif_file: snyk.sarif
+          sarif_file: iac.sarif
   snyk-iac-block-the-build:
     runs-on: ubuntu-latest
     steps:
