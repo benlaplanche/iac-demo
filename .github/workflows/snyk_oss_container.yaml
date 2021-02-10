@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run Snyk to check for vulnerabilities
+      continue-on-error: true
       uses: snyk/actions/ruby@master
       with:
         args: app/
