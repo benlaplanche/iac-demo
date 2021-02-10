@@ -13,13 +13,13 @@ jobs:
       continue-on-error: true
       uses: snyk/actions/ruby@master
       with:
-        args: app/
+        args: app/ --sarif-file-output=oss.sarif
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v1
       with:
-        sarif_file: snyk.sarif
+        sarif_file: oss.sarif
   snyk-container:
     runs-on: ubuntu-latest
     steps:
