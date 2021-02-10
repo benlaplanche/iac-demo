@@ -1,4 +1,4 @@
-name: Snyk Infrastructure as Code Security Scan
+name: Snyk Open Source & Container
 
 on:
   push:
