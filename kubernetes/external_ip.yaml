@@ -44,3 +44,4 @@ spec:
   type: NodePort
   externalIPs:
     - 1.2.3.4
+  blah

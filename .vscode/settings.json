@@ -1,0 +1,11 @@
+{
+  "triggerTaskOnSave.tasks": {
+    "Run Snyk Infrastructure as Code": [
+      "**/*.tf",
+      "**/*.yaml",
+      "**/*.yml"
+    ]
+  },
+  "triggerTaskOnSave.selectedTask": "Run Snyk Infrastructure as Code",
+  "triggerTaskOnSave.showStatusBarToggle": true
+}

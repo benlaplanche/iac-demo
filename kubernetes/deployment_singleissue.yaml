@@ -37,6 +37,7 @@ spec:
               - /tmp/healthy
             initialDelaySeconds: 5
             periodSeconds: 5
+          ben_woz_here: "learn how to write yaml!"
 ---
 apiVersion: v1
 kind: Service
