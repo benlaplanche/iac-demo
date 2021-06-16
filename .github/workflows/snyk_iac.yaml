@@ -19,6 +19,9 @@ jobs:
       - uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk.sarif
+      - name: Print sarif output
+        id: print-sarif
+        run: cat snyk.sarif
   snyk-iac-block-the-build:
     runs-on: ubuntu-latest
     steps:
